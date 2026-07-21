@@ -16,7 +16,7 @@ The fix is not a smarter agent — it's making sure the agent **never has to gue
 |---|---|---|
 | **Format** — the Documentation Blueprint | *What does a doc look like?* Goal · Input→Processing→Output · Out of scope · References — same places in every doc | `TEMPLATES.md` (Blueprint core skeleton, mandatory in every type) |
 | **Process** — C2C | *How does a doc come to exist, and what happens with it?* Interview → readiness gate → agent-spec → build loop → write-back | `SKILL.md` + `SKILL-FINALIZE.md` |
-| **Memory** — the living knowledge base | *Where does context come from, where do learnings go?* Curated, interlinked markdown articles the agent reads before the first prompt | per-project `wiki/` (Karpathy pattern; ImmoAlpha pilot exists: 4 hubs + 19 atoms) |
+| **Memory** — the living knowledge base | *Where does context come from, where do learnings go?* Curated, interlinked markdown articles the agent reads before the first prompt | `KNOWLEDGE-BASE.md` (pattern + conventions); per-project `wiki/` (ImmoAlpha pilot exists: 4 hubs + 19 atoms) |
 
 These aren't competing ideas — the Blueprint is the format layer of C2C, and the KB is the memory both read from and write back to.
 
@@ -51,6 +51,7 @@ Everything from the Blueprint's core skeleton is now **mandatory** in every C2C 
 | `TEMPLATES.md` | **Single source of truth** for all doc formats: types A/A'/B/C/D, module matrix, tier reference, style rules |
 | `SKILL.md` | `/c2c` — idea → living concept.md (interview, KB read, readiness gate) |
 | `SKILL-FINALIZE.md` | `/c2c-finalize` — 🟢 concept → agent-spec + summary + open-issues + changelog + KB write-back |
+| `KNOWLEDGE-BASE.md` | The memory layer, raw form: Karpathy wiki pattern, article conventions, read/write wiring — startable per project today, team decisions deliberately deferred |
 | `KONZEPT.md`, `SPEC.md` | Original product notes (v1, historical — German; kept for provenance, not needed to use the system) |
 
 **Worked example:** available on request — a real ImmoAlpha feature concept on the v2 template (`ImmoAlpha/C2C/grundriss-renovation-map/`), with a genuine KB block, a full IPO trace with ⚠ mock flags, and a tier-tagged decisions table.
@@ -68,5 +69,5 @@ Everything from the Blueprint's core skeleton is now **mandatory** in every C2C 
 
 1. **Now, costs nothing:** Kasona keeps using the Blueprint core skeleton — it *is* the v2 format layer. Docs written either way are compatible.
 2. **Pilot:** run ONE Kasona feature (ideally an upgrade to something existing — Lowel's pain case) through the full C2C loop: `/c2c upgrade` → gate → agent-spec → build.
-3. **Then:** shared `knowledge/` repo with per-project wikis + a weekly curator pass (draft ready: `ImmoAlpha/docs/context-engine-skill-draft.md`). ImmoAlpha's pilot wiki copies in as-is.
+3. **In parallel, costs little:** each project starts its own `wiki/` per `KNOWLEDGE-BASE.md` §6 — no team decisions needed. The shared `knowledge/` repo + weekly curator routine come after (deferred decisions listed in `KNOWLEDGE-BASE.md` §7; full draft: `ImmoAlpha/docs/context-engine-skill-draft.md`).
 4. Ship/Kill/Extend after ~4 weeks: interviews measurably shorter, `DECISION NEEDED` escalations the KB could have answered → 0, otherwise kill it — no zombie process.
