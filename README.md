@@ -52,9 +52,8 @@ Everything from the Blueprint's core skeleton is now **mandatory** in every C2C 
 | `SKILL.md` | `/c2c` — idea → living concept.md (interview, KB read, readiness gate) |
 | `SKILL-FINALIZE.md` | `/c2c-finalize` — 🟢 concept → agent-spec + summary + open-issues + changelog + KB write-back |
 | `KONZEPT.md`, `SPEC.md` | Original product notes (v1, historical — German; kept for provenance, not needed to use the system) |
-| `examples/grundriss-renovation-map.concept.md` | Worked example on the v2 template (see below) |
 
-**Worked example:** `examples/grundriss-renovation-map.concept.md` — a real ImmoAlpha feature on the v2 template, with a genuine KB block (inherits "don't re-merge PropertyDetails" from the project wiki), a full IPO trace with ⚠ mock flags, and a tier-tagged decisions table. (Lives canonically in `ImmoAlpha/C2C/grundriss-renovation-map/`; finalized v1 examples there: `dynamische-zimmer-analyse/`, `mehrsprachigkeit/`.)
+**Worked example:** available on request — a real ImmoAlpha feature concept on the v2 template (`ImmoAlpha/C2C/grundriss-renovation-map/`), with a genuine KB block, a full IPO trace with ⚠ mock flags, and a tier-tagged decisions table.
 **Slides (6-min pitch):** `ImmoAlpha/docs/c2c-slides/` — pipeline + granularity matrix, with speaker script.
 
 ## 5. Quickstart
