@@ -52,6 +52,7 @@ Everything from the Blueprint's core skeleton is now **mandatory** in every C2C 
 | `SKILL.md` | `/c2c` — idea → living concept.md (interview, KB read, readiness gate) |
 | `SKILL-FINALIZE.md` | `/c2c-finalize` — 🟢 concept → agent-spec + summary + open-issues + changelog + KB write-back |
 | `KNOWLEDGE-BASE.md` | The memory layer, raw form: Karpathy wiki pattern, article conventions, read/write wiring — startable per project today, team decisions deliberately deferred |
+| `examples/immoalpha-wiki/` | Frozen snapshot (2026-07-21) of the ImmoAlpha pilot wiki — the pattern in practice, test/raw phase; read `_ABOUT-THIS-SNAPSHOT.md` first |
 | `KONZEPT.md`, `SPEC.md` | Original product notes (v1, historical — German; kept for provenance, not needed to use the system) |
 
 **Worked example:** available on request — a real ImmoAlpha feature concept on the v2 template (`ImmoAlpha/C2C/grundriss-renovation-map/`), with a genuine KB block, a full IPO trace with ⚠ mock flags, and a tier-tagged decisions table.

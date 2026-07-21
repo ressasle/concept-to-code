@@ -82,7 +82,7 @@ Two channels:
 3. Add the routing lines to the project's agent config.
 4. Definition of done: an agent that reads only `index.md` + linked articles can answer *"what must I know before touching topic X?"* without asking a human.
 
-Reference implementation: the ImmoAlpha pilot (`wiki/` — 4 hubs, 19 atoms, seeded in ~1 day from existing material).
+Reference implementation: the ImmoAlpha pilot (`wiki/` — 4 hubs, 19 atoms, seeded in ~1 day from existing material). A frozen snapshot of it is included in this repo under `examples/immoalpha-wiki/` (test/raw phase — read `_ABOUT-THIS-SNAPSHOT.md` there first).
 
 ## 7. Deliberately deferred (needs team decisions — NOT required to start)
 
