@@ -40,7 +40,7 @@ Everything from the Blueprint's core skeleton is now **mandatory** in every C2C 
 2. **Decision tiers (the granularity matrix).** The Blueprint stores decisions; C2C sorts them: *expensive-if-wrong × no-obvious-answer* → only that quadrant needs human approval (Tier 1). Everything else is a logged default (Tier 2) or the loop's problem (Tier 3). A whole subsystem typically produces ~1 decision you actually make. The cut line is movable (regulated feature ↑, prototype ↓) — the model proposes the tier, the human owns the cut line.
 3. **The escape hatch.** The Blueprint prevents drift while *writing* the doc; C2C also prevents it while *building*: if the loop hits an unforeseen decision that matters, it does **not** guess — it stops, writes a `DECISION NEEDED` block into the concept, and waits. A silent wrong bet becomes a caught one.
 4. **Two audiences, two files.** `concept.md` in concept language (for the human decision), `agent-spec.md` fully technical (for the machine), `summary.md` for management. Mixing those audiences in one doc is exactly where long AI conversations drift.
-5. **Acceptance criteria as the loop's exit condition.** "Done" is a checklist the loop verifies against — implement → verify → fix → repeat until every box passes. The Blueprint has no definition of done.
+5. **Acceptance criteria as the loop's exit condition.** "Done" is a checklist the loop verifies against — implement → verify → fix → repeat until every `[M]` box passes (`[H]` boxes go to human acceptance). The Blueprint has no definition of done.
 6. **Write-back.** On finalize, Tier-1 decisions flow back into the knowledge base (as proposals, human-approved). Docs and KB stay alive instead of rotting.
 7. **KB-read → gap-scan → grill only the delta.** Every concept starts by reading the project wiki; inherited constraints are taken over, and the interview only asks what the KB doesn't know — so it gets shorter every week.
 
@@ -51,6 +51,7 @@ Everything from the Blueprint's core skeleton is now **mandatory** in every C2C 
 | `TEMPLATES.md` | **Single source of truth** for all doc formats: types A/A'/B/C/D, module matrix, tier reference, style rules |
 | `SKILL.md` | `/c2c` — idea → living concept.md (interview, KB read, readiness gate) |
 | `SKILL-FINALIZE.md` | `/c2c-finalize` — 🟢 concept → agent-spec + summary + open-issues + changelog + KB write-back |
+| `/abnahme` (optional, lives in the project, e.g. ImmoAlpha) | Turns the `[H]` criteria into a human test script and evaluates afterwards; not part of this package |
 | `KNOWLEDGE-BASE.md` | The memory layer, raw form: Karpathy wiki pattern, article conventions, read/write wiring — startable per project today, team decisions deliberately deferred |
 | `examples/immoalpha-wiki/` | Frozen snapshot (2026-07-21) of the ImmoAlpha pilot wiki — the pattern in practice, test/raw phase; read `_ABOUT-THIS-SNAPSHOT.md` first |
 | `KONZEPT.md`, `SPEC.md` | Original product notes (v1, historical — German; kept for provenance, not needed to use the system) |
@@ -65,6 +66,7 @@ Everything from the Blueprint's core skeleton is now **mandatory** in every C2C 
 3. Answer the Tier-1 questions as they surface; everything else becomes logged defaults.
 4. When the readiness checklist is 🟢: `/c2c-finalize` → agent-spec with P0–P3 + escape-hatch clause.
 5. Hand the agent-spec to any build agent. It implements → verifies against the acceptance criteria → fixes → repeats; on an unforeseen Tier-1 fork it stops and asks instead of guessing.
+6. Optional: `/abnahme` (if the project has the skill) turns the `[H]` criteria into a test script for the real channel.
 
 ## 6. Proposed adoption path (Techie Talk)
 

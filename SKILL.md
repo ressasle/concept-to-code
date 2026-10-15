@@ -92,6 +92,7 @@ User says "concept done" / "finalize":
 - **User's language** in chat, **English** in the files.
 - **Chat = short.** All substance goes into the files.
 - **concept.md is updated after EVERY prompt** in which the user provides something.
+- **Acceptance criteria:** when drafting them, ask which ones only a human can check at the real channel (phone, inbox, browser) and tag those `[H]`, the rest `[M]` (TEMPLATES.md).
 - **Probe only on critical gaps** (Tier-1 candidates, missing anti-goals) — not on trivia. If the user says "enough", it's enough (the decision gets logged as a Tier-2 default instead of asked).
 - Scope change → repeat KB + codebase analysis, fully update concept.md.
 - Assessment rules (workload/scope/success probability 🟢🟡🔴): 🟢 = 1-2 components / isolated / patterns exist · 🟡 = 3-5 components / moderate side effects / uncertainties · 🔴 = 6+ components / core architecture / fundamental restructuring.

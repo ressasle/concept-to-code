@@ -35,11 +35,11 @@ Without a feature name: take the only `C2C/` subfolder, or ask which one.
    - IPO trace made technically concrete (tables, functions, endpoints; ⚠ mock flags remain).
    - **P0–P3 rollout:** P0 = smallest shippable slice (hours), P1 days, P2 1-2 weeks, P3 expansion.
    - **Escape-hatch clause** (§4 wording): unforeseen Tier-1 decision → STOP, write `## DECISION NEEDED` into concept.md, never guess.
-   - Acceptance criteria = the build loop's exit conditions (implement → verify → fix → repeat).
+   - Acceptance criteria = the build loop's exit conditions (implement → verify → fix → repeat). `[M]`/`[H]` tags carry over unchanged from concept.md; the loop verifies `[M]` only, `[H]` stay open for human acceptance.
    - Complete enough that an agent can work without follow-up questions: all paths, numbered requirements, edge cases, existing patterns as reference.
 4. **Fill summary.md** (template §5) — max 1 page, no jargon, highlight open feedback points.
 5. **Create open-issues.md:** all Tier-2 defaults ("set, tunable") + consciously deferred points — so nothing disappears silently.
 6. **Create changelog.md** (decision ledger): per Tier-1 decision date · decision · reasoning · trade-off · rejected alternative. The loop appends to it during the build.
 7. **Write-back into the KB (NEW):** if the project has a KB (`wiki/` / `knowledge/`): check which articles are affected by the Tier-1 decisions and propose updates (new `decision-*` atom or amendment of existing articles; date contradictions, never overwrite). As a proposal/PR, not a silent commit — the human approves. Without this return channel the KB rots.
 8. **concept.md:** set `status: "final"`; update `C2C/overview.md` (the index).
-9. **Chat reply** (max 5-8 lines): paths of the filled files, number of Tier-1 decisions, proposed KB updates.
+9. **Chat reply** (max 5-8 lines): paths of the filled files, number of Tier-1 decisions, proposed KB updates. Last line: "Next step after the build: /abnahme" (only if the project has that skill; otherwise: "`[H]` criteria need human acceptance").

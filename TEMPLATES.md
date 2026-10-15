@@ -90,7 +90,7 @@ Status: Draft | In Review | Decided | Ready to build
 | Edge cases defined | ✅/❌ |
 | Out of scope named | ✅/❌ |
 | Open questions resolved | ✅/❌ (N open) |
-| Acceptance criteria formulated | ✅/❌ |
+| Acceptance criteria formulated and tagged `[M]` or `[H]` | ✅/❌ |
 
 ## Goal
 
@@ -188,8 +188,10 @@ name what should NOT be built, not just what should.>
 
 > "Done" means: every box checked, verified by the loop, not asserted.
 
-- [ ] <observable behavior 1>
-- [ ] <observable behavior 2>
+- [ ] `[M]` <observable behavior a test can prove, e.g. "tsc and unit tests pass; `GET /x` returns 200 with field `y`">
+- [ ] `[H]` <behavior only a human can check at the real channel, e.g. "WhatsApp: sending a photo to the number returns the expanded reply within 30 s">
+
+> Each criterion is exactly one kind: `[M]` machine (the loop verifies it) or `[H]` human (acceptance at the real channel: phone, inbox, browser). `[H]` only if no test can prove it.
 
 ## References
 
@@ -279,7 +281,10 @@ work stream until a human answers.
 
 ## Acceptance criteria (= the loop's exit conditions)
 
-- [ ] <measurable criterion — implement → verify against this → fix → repeat until all pass>
+- [ ] `[M]` <measurable criterion — implement → verify against this → fix → repeat until all pass>
+- [ ] `[H]` <criterion only a human can check at the real channel, e.g. "mail arrives in the inbox with the PDF attached"; the loop does not tick it>
+
+> Exactly one kind per criterion: `[M]` machine, `[H]` human (acceptance at the real channel). `[H]` only if no test can prove it. The loop exits when all `[M]` pass; `[H]` stay open for acceptance after the build.
 ````
 
 ---
